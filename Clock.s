@@ -1,3 +1,4 @@
+	.file	"Clock.c"
 	.text
 	.def	scanf;	.scl	3;	.type	32;	.endef
 	.seh_proc	scanf
@@ -490,7 +491,7 @@ Timer:
 	.ascii "Alarm stopped by user.\12\0"
 	.align 8
 .LC24:
-	.ascii "Alarm! Time elapsed: %02d hr : %02d min : %02d sec\12\0"
+	.ascii "Alarm! Time elapsed: %02d:%02d\12\0"
 	.text
 	.globl	Alarm
 	.def	Alarm;	.scl	2;	.type	32;	.endef
@@ -594,7 +595,6 @@ Alarm:
 	ja	.L45
 	movl	40(%rbp), %edx
 	movl	32(%rbp), %eax
-	movl	$0, %r9d
 	movl	%edx, %r8d
 	movl	%eax, %edx
 	leaq	.LC24(%rip), %rax
