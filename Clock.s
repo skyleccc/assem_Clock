@@ -1,4 +1,3 @@
-	.file	"Clock.c"
 	.text
 	.def	scanf;	.scl	3;	.type	32;	.endef
 	.seh_proc	scanf
